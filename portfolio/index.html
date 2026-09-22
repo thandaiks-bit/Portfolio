@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sanjay Thandaik | SEO, GEO &amp; AEO Specialist &amp; Web Dev</title>
   <meta name="description"
-    content="Sanjay Thandaik — SEO, GEO &amp; AEO Specialist and web developer who builds search- and AI-answer-optimized websites using WordPress and AI-assisted vibe coding.">
+    content="Sanjay Thandaik: SEO, GEO &amp; AEO Specialist and web developer who builds search- and AI-answer-optimized websites using WordPress and AI-assisted vibe coding.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -806,28 +806,44 @@
       transform: translate(3px, -3px);
     }
 
-    .work-card.placeholder {
+    .work-card-cta {
+      align-items: center;
       justify-content: center;
-      align-items: flex-start;
-      border-style: dashed;
-      background: rgba(19, 22, 39, 0.5);
+      text-align: center;
+      background: linear-gradient(160deg, rgba(99, 102, 241, 0.08), rgba(34, 211, 238, 0.05));
+      border: 1px dashed rgba(139, 92, 246, 0.4);
     }
 
-    .work-card.placeholder .work-number {
-      opacity: 0.4;
+    .work-card-cta:hover {
+      border-color: rgba(34, 211, 238, 0.55);
+      box-shadow: 0 24px 48px rgba(99, 102, 241, 0.22);
     }
 
-    .coming-soon-tag {
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: #71717a;
-      padding: 8px 14px;
-      border: 1px dashed rgba(255, 255, 255, 0.2);
-      border-radius: 999px;
-      margin-top: auto;
-      align-self: flex-start;
+    .work-cta-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 22px;
+      box-shadow: 0 0 30px rgba(139, 92, 246, 0.35);
+    }
+
+    .work-cta-icon svg {
+      width: 26px;
+      height: 26px;
+      color: #fff;
+    }
+
+    .work-card-cta h3 {
+      margin-bottom: 10px;
+    }
+
+    .work-card-cta p {
+      max-width: 260px;
+      margin-bottom: 26px;
     }
 
     /* ===== EXPERIENCE ===== */
@@ -1036,7 +1052,7 @@
       box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
     }
 
-    /* Custom dropdown — replaces the native <select> so it always matches the
+    /* Custom dropdown: replaces the native <select> so it always matches the
        site theme and always opens in the same place, instead of the OS picker. */
     .custom-select {
       position: relative;
@@ -1457,7 +1473,7 @@
         <div class="hero-visual reveal">
           <div class="glow-circle"></div>
           <div class="photo-frame">
-            <img src="images/sanjay thandaik.png" alt="Sanjay Thandaik — SEO, GEO &amp; AEO Specialist">
+            <img src="images/sanjay thandaik.png" alt="Sanjay Thandaik: SEO, GEO &amp; AEO Specialist">
           </div>
           <div class="code-card">
             <div class="dots"><span></span><span></span><span></span></div>
@@ -1570,7 +1586,7 @@
             </div>
             <h3>SEO, GEO &amp; AEO</h3>
             <p>Complete search optimization: keyword research, on-page and technical SEO, schema markup, audits, and
-              local SEO — plus GEO and AEO, so your content also gets surfaced by AI answer engines like ChatGPT and
+              local SEO, plus GEO and AEO, so your content also gets surfaced by AI answer engines like ChatGPT and
               Google AI Overviews, not just traditional search results.</p>
           </div>
           <div class="service-card reveal">
@@ -1582,7 +1598,7 @@
               </svg>
             </div>
             <h3>SEO-Focused Website Building</h3>
-            <p>I build websites from scratch — on WordPress or using AI-assisted vibe coding — designed around SEO best
+            <p>I build websites from scratch (on WordPress or using AI-assisted vibe coding) designed around SEO best
               practices from the ground up.</p>
           </div>
         </div>
@@ -1597,13 +1613,10 @@
           <h2>Some of My Recent Work</h2>
         </div>
 
-        <!-- Projects 02 & 03 below are placeholders. When a project is ready, replace the
-             <span class="coming-soon-tag">Coming Soon</span> line with a link in the same
-             style as the "View Project" link in project 01 above. -->
         <div class="work-grid">
           <div class="work-card reveal">
             <div class="work-number">01</div>
-            <h3>National Basket — WordPress Website</h3>
+            <h3>National Basket: WordPress Website</h3>
             <div class="work-thumb">
               <img src="images/national-basket-home.png" alt="National Basket website homepage screenshot">
             </div>
@@ -1618,7 +1631,6 @@
               <span class="tag">Site Architecture</span>
             </div>
             <div class="work-links-row">
-              <!-- TODO: paste the live National Basket site URL into href="#" below -->
               <a href="https://nationalbasket.com/" target="_blank" rel="noopener noreferrer" class="work-link">
                 Visit Site
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -1627,7 +1639,6 @@
                   <polyline points="7 7 17 7 17 17"></polyline>
                 </svg>
               </a>
-              <!-- TODO: paste the "Anyone with the link" Google Drive PDF link into href="#" below -->
               <a href="https://drive.google.com/file/d/1Ij9jij5JzN3Y4K4fxLAr20pQHt3Me9oR/view?usp=sharing"
                 target="_blank" rel="noopener noreferrer" class="work-link">
                 Case Study
@@ -1640,20 +1651,63 @@
             </div>
           </div>
 
-          <div class="work-card placeholder reveal">
+          <div class="work-card reveal">
             <div class="work-number">02</div>
-            <h3>Vibe-Coded Project</h3>
-            <p>A new AI-assisted, SEO-optimized website build — currently in progress. Details and a live demo will be
-              added here soon.</p>
-            <span class="coming-soon-tag">Coming Soon</span>
+            <h3>Suraj Construction Company: Vibe-Coded Website</h3>
+            <div class="work-thumb">
+              <img src="images/suraj-construction-home.png" alt="Suraj Construction Company website homepage screenshot">
+            </div>
+            <p>Built a complete website from scratch through AI-assisted vibe coding for Suraj Construction Company,
+              a road and highway infrastructure contractor delivering government tender projects (including work
+              with NHAI, Haryana PWD, MP PWD, and HSRDC) since 2004. Structured the site around their government
+              project credentials, completed work, and partner agencies to present a 22-year track record clearly.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Vibe Coding</span>
+              <span class="tag">Website Development</span>
+              <span class="tag">Government Tenders</span>
+            </div>
+            <div class="work-links-row">
+              <a href="https://surajconstructioncompany.in/" target="_blank" rel="noopener noreferrer"
+                class="work-link">
+                Visit Site
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+              <a href="https://drive.google.com/file/d/1vD6mJb4gwc_IfEU05eoghoydK35b2-e-/view?usp=sharing"
+                target="_blank" rel="noopener noreferrer" class="work-link">
+                Case Study
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
           </div>
 
-          <div class="work-card placeholder reveal">
-            <div class="work-number">03</div>
-            <h3>Vibe-Coded Project</h3>
-            <p>Another AI-assisted website build, planned around a fully SEO-first architecture. Case study to follow.
-            </p>
-            <span class="coming-soon-tag">Coming Soon</span>
+          <div class="work-card work-card-cta reveal">
+            <div class="work-cta-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </div>
+            <h3>Yours Could Be Next</h3>
+            <p>Building an SEO-focused website, or need one built the right way from day one? Let's start the
+              conversation.</p>
+            <a href="#contact" class="btn btn-primary">
+              Start a Project
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
@@ -1664,19 +1718,19 @@
       <div class="container">
         <div class="section-head reveal">
           <span class="label">Experience</span>
-          <h2>Where I've Worked</h2>
+          <h2>My Journey So Far</h2>
         </div>
 
         <div class="timeline">
           <div class="timeline-item reveal">
             <div class="timeline-dot"><span></span></div>
             <div class="timeline-card">
-              <div class="timeline-role">SEO Specialist</div>
+              <div class="timeline-role">Freelance Digital Marketer &amp; AI Web Developer</div>
               <div class="timeline-meta">
-                <span>Obelisk Infotech</span><span class="dot-sep">•</span><span class="date">Jan 2025 – Present</span>
+                <span>Self-Employed</span>
               </div>
-              <p>Managing SEO campaigns across multiple client websites, conducting keyword research, technical audits,
-                and client communication.</p>
+              <p>Independently building and marketing complete client websites, from AI-assisted development to
+                full SEO strategy, delivering sites that are ready to rank from launch.</p>
             </div>
           </div>
 
@@ -1685,24 +1739,35 @@
             <div class="timeline-card">
               <div class="timeline-role">Freelance SEO &amp; WordPress Consultant</div>
               <div class="timeline-meta">
-                <span>VS Wirecraft (Client Project)</span><span class="dot-sep">•</span><span class="date">Oct – Dec
-                  2025</span>
+                <span>Self-Employed</span>
               </div>
-              <p>Built a WordPress website from scratch and executed complete SEO strategy including technical setup and
-                on-page optimization.</p>
+              <p>Built a WordPress website from scratch and executed a complete SEO strategy, from technical setup
+                to on-page optimization, ready to rank from day one.</p>
             </div>
           </div>
 
           <div class="timeline-item reveal">
             <div class="timeline-dot"><span></span></div>
             <div class="timeline-card">
-              <div class="timeline-role">SEO Intern</div>
+              <div class="timeline-role">Digital Marketing Specialist</div>
               <div class="timeline-meta">
-                <span>WTechy, IT Park Panchkula</span><span class="dot-sep">•</span><span class="date">Jul – Sep
-                  2025</span>
+                <span>Obelisk Infotech</span>
               </div>
-              <p>Assisted in keyword research, competitor analysis, and technical SEO implementation using SEMrush and
-                Google Search Console.</p>
+              <p>Ran SEO campaigns across multiple client websites, using keyword research and technical audits to
+                drive measurable improvements in search visibility.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"><span></span></div>
+            <div class="timeline-card">
+              <div class="timeline-role">Digital Marketing Intern</div>
+              <div class="timeline-meta">
+                <span>WTechy</span>
+              </div>
+              <p>Built hands-on SEO skills through keyword research, competitor analysis, and technical
+                implementation using SEMrush and Google Search Console, skills now applied directly to client work.
+              </p>
             </div>
           </div>
         </div>
