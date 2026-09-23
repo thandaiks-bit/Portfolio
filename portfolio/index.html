@@ -1836,15 +1836,16 @@
         </div>
 
         <div class="contact-grid">
-          <form class="contact-form reveal" id="contactForm">
+          <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/mjykrpyn"
+            method="POST">
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" id="name" placeholder="Your name" required>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
               </div>
               <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" placeholder="you@example.com" required>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
               </div>
             </div>
             <div class="form-group">
@@ -1872,7 +1873,7 @@
             </div>
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" placeholder="Tell me about your project..." required></textarea>
+              <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
             </div>
             <button type="submit" class="btn btn-primary submit-btn">
               Send Message
@@ -2022,22 +2023,42 @@
 
     // Contact form (placeholder submit)
     const contactForm = document.getElementById('contactForm');
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       if (!needInput.value) {
         needSelect.classList.add('open');
         needTrigger.focus();
         return;
       }
+
       const btn = contactForm.querySelector('.submit-btn');
       const originalText = btn.innerHTML;
-      btn.innerHTML = 'Message Sent!';
-      contactForm.reset();
-      needValue.textContent = 'Select a service';
-      needSelect.classList.remove('has-value');
-      needInput.value = '';
-      needOptions.querySelectorAll('li').forEach(o => o.classList.remove('active'));
-      setTimeout(() => { btn.innerHTML = originalText; }, 2500);
+      btn.disabled = true;
+      btn.innerHTML = 'Sending...';
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          btn.innerHTML = 'Message Sent!';
+          contactForm.reset();
+          needValue.textContent = 'Select a service';
+          needSelect.classList.remove('has-value');
+          needInput.value = '';
+          needOptions.querySelectorAll('li').forEach(o => o.classList.remove('active'));
+        } else {
+          btn.innerHTML = 'Something went wrong, try again';
+        }
+      } catch (error) {
+        btn.innerHTML = 'Something went wrong, try again';
+      }
+
+      btn.disabled = false;
+      setTimeout(() => { btn.innerHTML = originalText; }, 3000);
     });
   </script>
 
